@@ -1,0 +1,23 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      #- name: Copy HTML files
+       # run: |
+          # Replace the path with the appropriate directory where your HTML files are located
+        #  cp -R ./path/to/html/files /var/www/html
+
+      # - name: Restart Nginx
+        # run: systemctl reload nginx
+
